@@ -1,33 +1,157 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+h1, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  padding: 14px 0 ;
   text-align: center;
+  margin-bottom: 12px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  height: 40px;
+  padding: 12px;
+  background-color: black;
+  border: none;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  width: 50%;
+  transition: all .4s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background-color: black;
+  padding: 24px 12px;
+  width: 100%;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.actions button:first-child {
+  border-right: 1px solid #EAEAEA;
+}
+.actions button:last-child {
+  border-left: 1px solid #EAEAEA;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  font-size: 14px;
+  margin: 0;
+}
+
+.sold-out {
+  border-left: 5px solid #EA3546;
+}
+
+.almost-sold-out {
+  border-left: 5px solid #F9C80E;
+}
+
+.available {
+  border-left: 5px solid #23967F;
+}
+
+ul,
+.list-header {
+  padding: 0 24px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+  padding: 12px;
+  margin-bottom: 5px;
+  box-shadow: 3px 2px 5px #eee;
+}
+
+li:last-child {
+  margin-bottom: 2rem;
+}
+
+span {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.name {
+  display: inline;
+}
+
+.location-name,
+.location-address {
+  font-size: 10px;
+}
+
+.location-address {
+  text-transform: initial;
+}
+
+.separator {
+  width: 5px;
+  height: 5px;
+  background-color: #ccc;
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wrapper:first-child {
+  margin-bottom: 12px;
+}
+
+.date {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.helper-text {
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 55%;
+}
+
+.filter {
+  height: 40px;
+  border: 2px solid black;
+  width: 100%;
+  font-size: 14px;
+  padding: 0 12px;
 }
