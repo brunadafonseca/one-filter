@@ -47,8 +47,10 @@ const App = () => {
   }
 
   const fetchClassesToday = async () => {
+    setLoading(true)
     const classesToday = await fetchClassesPerDay(dates[0])
 
+    setLoading(false)
     setClasses([{ date: dates[0].date, data: classesToday }])
   }
 
@@ -61,8 +63,8 @@ const App = () => {
       return obj
     }))
 
-    setClasses(allClasses)
     setLoading(false)
+    setClasses(allClasses)
   }
 
   const search = e => {
@@ -110,7 +112,7 @@ const App = () => {
       </div>
 
       <div className="content">
-        {!classes.length && <div className="helper-text">Click one of the buttons to start your search</div>}
+        {(!classes.length && !loading) && <div className="helper-text">Click one of the buttons to start your search</div>}
         {loading && <div className="helper-text">Fetching data...</div>}
         {!loading && filteredClasses.map((data) => (
           <ul id="list">
