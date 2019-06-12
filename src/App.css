@@ -43,6 +43,13 @@ button:hover {
   margin-bottom: 2rem;
 }
 
+.header > * {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .actions {
   width: 100%;
   display: flex;
