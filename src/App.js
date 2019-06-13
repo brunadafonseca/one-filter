@@ -71,8 +71,9 @@ const App = () => {
     setFilteredClasses(classes.map(obj => {
       if (obj.data) {
         const data = obj.data.filter(item => {
+          const query = e.target.value.toLowerCase().trim()
           const name = item.name.toLowerCase()
-          return name.includes(e.target.value)
+          return name.includes(query)
         })
 
         return { ...obj, data }
